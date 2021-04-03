@@ -3,3 +3,4 @@ content:
 - Generating passwords
 - Parse url
 - Compression algorithm
+- Move the first N characters
