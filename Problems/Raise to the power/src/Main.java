@@ -1,13 +1,10 @@
 import java.util.Scanner;
 
-import static java.lang.Math.pow;
-
 public class Main {
 
     public static long power(int n, int m) {
         // write your code here
-        long out = (long) Math.pow(n, m);
-        return out;
+        return  (long) Math.pow(n, m);
     }
 
     /* Do not change code below */
