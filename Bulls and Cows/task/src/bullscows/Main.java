@@ -1,37 +1,67 @@
 package bullscows;
 
+import java.util.Scanner;
+
+class Grade {
+    int bulls;
+    int cows;
+
+    Grade(int bulls, int cows) {
+        this.bulls = bulls;
+        this.cows = cows;
+    }
+}
+
+class Game {
+    String secret = "9305";
+
+    private static String getGuess() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next();
+    }
+
+    Grade getGrade(String guess) {
+        int bulls = 0;
+        int cows = 0;
+
+        for (int i = 0; i < guess.length(); i++) {
+            if (guess.charAt(i) == this.secret.charAt(i)) {
+                bulls += 1;
+            } else if (this.secret.indexOf(guess.charAt(i)) != -1) {
+                cows += 1;
+            }
+        }
+
+        return new Grade(bulls, cows);
+    }
+
+    private void printGrade(Grade grade) {
+        String gradeString;
+
+        if (grade.bulls != 0 && grade.cows != 0) {
+            gradeString = String.format("%d bull(s) and %d cow(s)", grade.bulls, grade.cows);
+        } else if (grade.bulls != 0) {
+            gradeString = String.format("%d bull(s)", grade.bulls);
+        } else if (grade.cows != 0) {
+            gradeString = String.format("%d cow(s)", grade.cows);
+        } else {
+            gradeString = "None";
+        }
+
+        System.out.printf("Grade: %s. The secret code is %s.", gradeString, this.secret);
+        System.out.println();
+    }
+
+    void play() {
+        String guess = getGuess();
+        Grade grade = getGrade(guess);
+        printGrade(grade);
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println("The secret code is prepared: ****.\n" +
-                "\n" +
-                "Turn 1. Answer:\n" +
-                "1234\n" +
-                "Grade: 1 cow.\n" +
-                "\n" +
-                "Turn 2. Answer:\n" +
-                "5678\n" +
-                "Grade: 1 cow.\n" +
-                "\n" +
-                "Turn 3. Answer:\n" +
-                "9012\n" +
-                "Grade: 1 bull and 1 cow.\n" +
-                "\n" +
-                "Turn 4. Answer:\n" +
-                "9087\n" +
-                "Grade: 1 bull and 1 cow.\n" +
-                "\n" +
-                "Turn 5. Answer:\n" +
-                "1087\n" +
-                "Grade: 1 cow.\n" +
-                "\n" +
-                "Turn 6. Answer:\n" +
-                "9205\n" +
-                "Grade: 3 bulls.\n" +
-                "\n" +
-                "Turn 7. Answer:\n" +
-                "9305\n" +
-                "Grade: 4 bulls.\n" +
-                "Congrats! The secret code is 9305.");
+        Game game = new Game();
+        game.play();
     }
 }
