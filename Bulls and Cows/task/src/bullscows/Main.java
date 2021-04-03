@@ -2,66 +2,48 @@ package bullscows;
 
 import java.util.Scanner;
 
-class Grade {
-    int bulls;
-    int cows;
-
-    Grade(int bulls, int cows) {
-        this.bulls = bulls;
-        this.cows = cows;
-    }
-}
-
-class Game {
-    String secret = "9305";
-
-    private static String getGuess() {
-        Scanner scanner = new Scanner(System.in);
-        return scanner.next();
-    }
-
-    Grade getGrade(String guess) {
-        int bulls = 0;
-        int cows = 0;
-
-        for (int i = 0; i < guess.length(); i++) {
-            if (guess.charAt(i) == this.secret.charAt(i)) {
-                bulls += 1;
-            } else if (this.secret.indexOf(guess.charAt(i)) != -1) {
-                cows += 1;
-            }
-        }
-
-        return new Grade(bulls, cows);
-    }
-
-    private void printGrade(Grade grade) {
-        String gradeString;
-
-        if (grade.bulls != 0 && grade.cows != 0) {
-            gradeString = String.format("%d bull(s) and %d cow(s)", grade.bulls, grade.cows);
-        } else if (grade.bulls != 0) {
-            gradeString = String.format("%d bull(s)", grade.bulls);
-        } else if (grade.cows != 0) {
-            gradeString = String.format("%d cow(s)", grade.cows);
-        } else {
-            gradeString = "None";
-        }
-
-        System.out.printf("Grade: %s. The secret code is %s.", gradeString, this.secret);
-        System.out.println();
-    }
-
-    void play() {
-        String guess = getGuess();
-        Grade grade = getGrade(guess);
-        printGrade(grade);
-    }
-}
-
 public class Main {
+    private static int getSecretLength() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+    private static StringBuilder getRandomData() {
+        long pseudoRandomNumber = System.nanoTime();
+        StringBuilder sb = new StringBuilder(String.valueOf(pseudoRandomNumber));
+        sb.reverse();
+        return sb;
+    }
+
+    private static String getSecret(int secretLength) {
+        StringBuilder secret = new StringBuilder(secretLength);
+        StringBuilder randomData = getRandomData();
+        int i = 0;
+
+        while (secret.length() < secretLength) {
+            if (i == randomData.length()) {
+                randomData = getRandomData();
+                i = 0;
+            }
+
+            if (secret.toString().indexOf(randomData.charAt(i)) == -1) {
+                secret.append(randomData.charAt(i));
+            }
+
+            i++;
+        }
+
+        return secret.toString();
+    }
+
     public static void main(String[] args) {
-        Game game = new Game();
-        game.play();
+        int secretLength = getSecretLength();
+        if (secretLength > 10) {
+            System.out.printf("Error: can't generate a secret number with a length of %d" +
+                    " because there aren't enough unique digits.\n", secretLength);
+        } else {
+            String secret = getSecret(secretLength);
+            System.out.printf("The random secret number is %s.", secret);
+        }
     }
 }
