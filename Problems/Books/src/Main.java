@@ -1,5 +1,5 @@
 // write your class here
-class Book{
+class Book {
     String title;
     int yearOfPublishing;
     boolean isAvailable;
