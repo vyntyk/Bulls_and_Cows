@@ -11,7 +11,7 @@ public class Main {
     private static StringBuilder getRandomData() {
         long pseudoRandomNumber = System.nanoTime();
         StringBuilder sb = new StringBuilder(String.valueOf(pseudoRandomNumber));
-        sb.reverse();
+        //sb.reverse();
         return sb;
     }
 
@@ -25,14 +25,11 @@ public class Main {
                 randomData = getRandomData();
                 i = 0;
             }
-
             if (secret.toString().indexOf(randomData.charAt(i)) == -1) {
                 secret.append(randomData.charAt(i));
             }
-
-            i++;
+            ++i;
         }
-
         return secret.toString();
     }
 
