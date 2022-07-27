@@ -1,0 +1,85 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+Bulls and Cows/Error_/
+        Bulls and Cows/Game log/
+        Bulls and Cows/Game time_/
+        Bulls and Cows/Grader/
+        Bulls and Cows/Improve the code generator/
+        Bulls and Cows/New level/
+        Bulls and Cows/Secret code/
+        Bulls and Cows/task/build/
+        Bulls and Cows/task/out/
+        Problems/Accounts/task-info.yaml
+        Problems/Accounts/task-remote-info.yaml
+        Problems/Army/out/
+        Problems/Army/task-info.yaml
+        Problems/Army/task-remote-info.yaml
+        Problems/Books/task-info.yaml
+        Problems/Books/task-remote-info.yaml
+        Problems/Calculating factorials/out/
+        Problems/Calculating factorials/task-info.yaml
+        Problems/Calculating factorials/task-remote-info.yaml
+        Problems/Calculator with four methods/out/
+        Problems/Calculator with four methods/task-info.yaml
+        Problems/Calculator with four methods/task-remote-info.yaml
+        Problems/Change identities/task-info.yaml
+        Problems/Change identities/task-remote-info.yaml
+        Problems/Compression algorithm/out/
+        Problems/Compression algorithm/task-info.yaml
+        Problems/Compression algorithm/task-remote-info.yaml
+        Problems/Concat all strings without digits/out/
+        Problems/Concat all strings without digits/task-info.yaml
+        Problems/Concat all strings without digits/task-remote-info.yaml
+        Problems/Create a full name/task-info.yaml
+        Problems/Create a full name/task-remote-info.yaml
+        Problems/Decompose a math function/task-info.yaml
+        Problems/Decompose a math function/task-remote-info.yaml
+        Problems/Fixing the main method (1)/out/
+        Problems/Fixing the main method (1)/task-info.yaml
+        Problems/Fixing the main method (1)/task-remote-info.yaml
+        Problems/Fixing the main method/out/
+        Problems/Fixing the main method/task-info.yaml
+        Problems/Fixing the main method/task-remote-info.yaml
+        Problems/Generating passwords/task-info.yaml
+        Problems/Generating passwords/task-remote-info.yaml
+        Problems/How many nuts each squirrel will get/out/
+        Problems/How many nuts each squirrel will get/task-info.yaml
+        Problems/How many nuts each squirrel will get/task-remote-info.yaml
+        Problems/Inner boxes/task-info.yaml
+        Problems/Inner boxes/task-remote-info.yaml
+        Problems/Move the first N characters/out/
+        Problems/Move the first N characters/task-info.yaml
+        Problems/Move the first N characters/task-remote-info.yaml
+        Problems/Parse url/out/
+        Problems/Parse url/task-info.yaml
+        Problems/Points on the 2D plane/task-info.yaml
+        Problems/Points on the 2D plane/task-remote-info.yaml
+        Problems/Preparing full name/out/
+        Problems/Preparing full name/task-info.yaml
+        Problems/Preparing full name/task-remote-info.yaml
+        Problems/Raise to the power/out/
+        Problems/Raise to the power/task-info.yaml
+        Problems/Raise to the power/task-remote-info.yaml
+        Problems/Representing time as a class/task-info.yaml
+        Problems/Representing time as a class/task-remote-info.yaml
+        Problems/Sum of numbers in the range/out/
+        Problems/Sum of numbers in the range/task-info.yaml
+        Problems/Sum of numbers in the range/task-remote-info.yaml
+        Problems/The English alphabet/out/
+        Problems/The English alphabet/task-info.yaml
+        Problems/The English alphabet/task-remote-info.yaml
+        Problems/The percentage of G and C characters/task-info.yaml
+        Problems/The percentage of G and C characters/task-remote-info.yaml
+        Problems/The sign of a number/out/
+        Problems/The sign of a number/task-info.yaml
+        Problems/The sign of a number/task-remote-info.yaml
+        Problems/Vowel or not/task-info.yaml
+        Problems/Vowel or not/task-remote-info.yaml
+        build.gradle
+        course-info.yaml
+        course-remote-info.yaml
+        gradle/
+        gradlew
+        gradlew.bat
+        settings.gradle

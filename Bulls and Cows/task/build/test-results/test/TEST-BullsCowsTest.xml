@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BullsCowsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-14T20:45:43" hostname="LAPTOP-01Q1KF5A" time="0.213">
+  <properties/>
+  <testcase name="start" classname="BullsCowsTest" time="0.213"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+> 4
+?[1;31m
+Start test 2?[0m
+> 1
+?[1;31m
+Start test 3?[0m
+> 11
+Error: can't generate a secret number with a length of 11 because there aren't enough unique digits.
+?[1;31m
+Start test 4?[0m
+> 6
+?[1;31m
+Start test 5?[0m
+> 3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

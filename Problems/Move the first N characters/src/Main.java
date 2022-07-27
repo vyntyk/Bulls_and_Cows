@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        // put your code here
+        // Привет
+        //4
+        //етПрив
         Scanner scanner = new Scanner(System.in);
 
         String phrase = scanner.next();

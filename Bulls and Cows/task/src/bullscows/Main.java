@@ -7,14 +7,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
-
     private static StringBuilder getRandomData() {
         long pseudoRandomNumber = System.nanoTime();
         StringBuilder sb = new StringBuilder(String.valueOf(pseudoRandomNumber));
         //sb.reverse();
         return sb;
     }
-
     private static String getSecret(int secretLength) {
         StringBuilder secret = new StringBuilder(secretLength);
         StringBuilder randomData = getRandomData();
@@ -32,7 +30,6 @@ public class Main {
         }
         return secret.toString();
     }
-
     public static void main(String[] args) {
         int secretLength = getSecretLength();
         if (secretLength > 10) {
